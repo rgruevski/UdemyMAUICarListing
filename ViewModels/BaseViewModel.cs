@@ -3,8 +3,11 @@ namespace UdemyMAUICarListing.ViewModels;
 public partial class BaseViewModel : ObservableObject
 {
     [ObservableProperty]
-    string _title;
+    string title;
 
     [ObservableProperty]
-    bool _isBusy;
+    [NotifyPropertyChangedFor(nameof(NotLoading))]
+    bool loading;
+
+    public bool NotLoading => !loading;
 }
