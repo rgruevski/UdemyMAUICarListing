@@ -1,7 +1,7 @@
 ﻿using UdemyMAUICarListing.Models;
 
 namespace UdemyMAUICarListing.Services;
-public class CarService
+public partial class CarService
 {
     public static List<Car> GetCars() => new()
     {
